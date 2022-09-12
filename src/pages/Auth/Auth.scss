@@ -1,0 +1,198 @@
+.Auth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 4rem;
+    position: relative;
+    
+
+    .Auth-wrapper {
+        width: 70%;
+        min-height: 63vh;
+        display: flex;
+        box-shadow: var(--profileShadow);
+        border-radius: 10px;
+        padding: 1rem;
+        background: var(--cardColor);
+
+        >div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .a-left {
+            flex: 1;
+            display: flex;
+            gap: 2rem;
+            justify-content: flex-end;
+
+            img {
+                width: 4rem;
+                height: 4rem;
+            }
+
+            .auth-inner {
+                h1 {
+                    font-size: 2.2rem;
+                    background-image: var(--buttonBg);
+                    background-size: 100%;
+                    background-repeat: repeat;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    -moz-background-clip: text;
+                    -moz-text-fill-color: transparent;
+                }
+
+                h6 {
+                    font-size: 0.96rem;
+                }
+            }
+        }
+
+        .a-right {
+
+            flex: 1.2;
+            flex-wrap: wrap;
+
+            .page-switcher {
+                display: flex;
+                gap: 10px;
+            }
+
+            .auth-form {
+                width: 100%;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 2.3rem 6.5rem;
+                gap: 1rem;
+                flex-direction: column;
+
+                .form-input {
+                    flex: 1;
+                    width: 100%;
+
+                    .auth-input {
+                        width: 100%;
+                        border: none;
+                        outline: none;
+                        border-bottom: 1px solid var(--orange);
+                        background-color: var(--inputColor);
+                        padding: 10px;
+                        border-radius: 7px;
+                    }
+                }
+
+                button {
+                    padding: 10px;
+                    width: 60%;
+                    align-self: center;
+                }
+            }
+
+            .switch {
+                flex-basis: 100%;
+                text-align: center;
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .Auth {
+        .Auth-wrapper {
+            .a-right {
+                .auth-form {
+                    padding: 1rem 3rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .Auth {
+        .Auth-wrapper {
+            flex-direction: column;
+
+            .a-left {
+                justify-content: center;
+            }
+
+            .a-right {
+                .auth-form {
+                    width: 80%;
+                    padding: 1rem 4rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .Auth {
+        .Auth-wrapper {
+          .a-right {
+                .auth-form {
+                    padding: 1rem 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .Auth {
+        .Auth-wrapper {
+            width: 100%;
+            .a-right {
+                .auth-form {
+                    width: 80%;
+                    padding: 1rem 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .Auth {
+        .Auth-wrapper {
+            .a-left {
+                .auth-inner {
+                    h1 {
+                        font-size: 1.9rem;
+                    }
+                }
+            }
+
+            .a-right {
+                .auth-form {
+                    width: 100%;
+                    padding: 1rem 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .Auth {
+        .Auth-wrapper {
+            .a-left {
+                flex-direction: column;
+                .auth-inner {
+                    h1 {
+                        font-size: 1.9rem;
+                    }
+                }
+            }
+            
+        }
+    }
+}

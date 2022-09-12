@@ -1,0 +1,105 @@
+.ProfileCard {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    gap: 1rem;
+    width: 100%;
+    background: var(--cardColor);
+    padding: 10px;
+
+    .ProfileImages {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+
+        img:first-child {
+            width: 100%;
+            height: 12rem;
+            object-fit: cover;
+            transform: rotate(180deg);
+            border-radius: 1rem;
+        }
+
+        img:last-child {
+            position: absolute;
+            width: 5rem;
+            height: 5rem;
+            bottom: -1.9rem;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+
+    .ProfileName {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1.9rem;
+        gap: 10px;
+
+        span:first-child {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        span:last-child {
+            font-weight: 500;
+        }
+    }
+
+    .followStatus {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.75em;
+
+        hr {
+            width: 85%;
+            border: 1px solid var(--hrColor);
+        }
+
+        >.row {
+            display: flex;
+            display: flex;
+            width: 80%;
+            justify-content: space-around;
+            align-items: center;
+
+            .follow {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 0.75em;
+
+                span:nth-of-type(1) {
+                    font-weight: bold;
+                    ;
+                }
+
+                span:nth-of-type(2) {
+                    color: var(--gray);
+                }
+            }
+
+            .vl {
+                height: 150%;
+                border-left: 2px solid var(--hrColor);
+            }
+
+
+        }
+    }
+
+    .my-profile {
+        font-weight: bold;
+        color: var(--orange);
+        align-self: center;
+        margin-bottom: 1rem;
+        cursor: pointer;
+    }
+}
