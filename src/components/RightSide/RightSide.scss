@@ -5,14 +5,19 @@
     width: 100%;
 
     .navIcons {
-        background: pink;
+        background: var(--inputColor);
         margin-top: 1rem;
         display: flex;
         gap: 10px;
         justify-content: space-between;
+        padding: 5px;
+        border-radius: 5px;
 
         .icon {
             flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
     button {

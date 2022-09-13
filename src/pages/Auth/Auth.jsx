@@ -1,10 +1,8 @@
 import './Auth.scss'
 import Logo from '../../img/android-chrome-192x192.png'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
 
-const Auth = () => {
-    const [page, setPage] = useState('sign-in')
+const Auth = ({ page }) => {
 
     return (
         <div className='Auth'>
@@ -18,9 +16,9 @@ const Auth = () => {
                 </div>
                 <div className="a-right">
                     <div className='page-switcher'>
-                        <h3>{page == 'sign-up' ? 'Sign up' : 'Sign in'}</h3>
+                        <h3>{page === 'sign-up' ? 'Sign up' : 'Sign in'}</h3>
                     </div>
-                    {page == 'sign-up' ? <SignUp /> : <SignIn />}
+                    {page === 'sign-up' ? <SignUp /> : <SignIn />}
                 </div>
             </div>
         </div>
@@ -46,7 +44,7 @@ function SignUp() {
                 <button className="button">Sign Up</button>
             </form>
             <div className='switch'>
-                <span>Already have an account? <a to="/login">Login</a></span>
+                <span>Already have an account? <Link to="/sign-in">Login</Link></span>
             </div>
         </>
     )
@@ -64,7 +62,7 @@ function SignIn() {
                 <button className="button">Sign In</button>
             </form>
             <div className='switch'>
-                <span>You don't have an account? <a to="/register">Register</a></span>
+                <span>You don't have an account? <Link to="/sign-up">Register</Link></span>
             </div>
         </>
     )

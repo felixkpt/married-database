@@ -41,14 +41,16 @@
             .postOptions {
                 display: flex;
                 gap: 10px;
+                align-items: center;
 
                 .postOption {
-                    padding: 10px;
+                    padding: 4px;
                     border-radius: 10px;
                     font-size: 13px;
                     flex: 1;
                     // background: var(--orange);
                     color: white;
+                    display: flex;
 
                     &:hover {
                         cursor: pointer;
@@ -60,8 +62,8 @@
                 }
 
                 button {
-                    padding: 5px 20px;
-                    font-size: 12px;
+                    padding: 7px 20px;
+                    font-size: 18px;
                 }
             }
 
